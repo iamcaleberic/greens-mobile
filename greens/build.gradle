@@ -4,6 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
+
     defaultConfig {
         applicationId "bscorp.appbase"
         minSdkVersion 14
@@ -26,6 +27,8 @@ dependencies {
     compile 'com.android.support:design:23.0.1'
     compile 'com.facebook.android:facebook-android-sdk:4.0.0'
     compile 'com.google.android.gms:play-services:8.3.0'
+
+
 }
 
 apply plugin: 'com.google.gms.google-services'
