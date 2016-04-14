@@ -1,11 +1,5 @@
 <resources>
-    <string name="app_name">Greens</string>
+    <string name="app_name">Igreens</string>
 
-    <string name="login">LOGIN</string>
-    <string name="name">Name</string>
-    <string name="password">Password</string>
-    <string name="go">GO</string>
-    <string name="register">REGISTER</string>
-    <string name="repeat_password">Repeat Password</string>
-    <string name="next">NEXT</string>
+    <string name="app_decription">*iHub_ Greens</string>
 </resources>

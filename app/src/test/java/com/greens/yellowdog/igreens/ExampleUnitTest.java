@@ -1,4 +1,4 @@
-package bscorp.jijothic;
+package com.greens.yellowdog.igreens;
 
 import org.junit.Test;
 

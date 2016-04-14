@@ -1,4 +1,4 @@
-package com.greens.yellowdog.greens;
+package com.greens.yellowdog.igreens;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
