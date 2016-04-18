@@ -62,13 +62,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        @Override
+/*
+
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
             super.onActivityResult(requestCode, resultCode, data);
             // Make sure that the loginButton hears the result from any
             // Activity that it triggered.
             loginButton.onActivityResult(requestCode, resultCode, data);
         }
+*/
 
 
     }
