@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.CustomEvent;
 import com.digits.sdk.android.Digits;
 import com.digits.sdk.android.DigitsAuthButton;
 import com.twitter.sdk.android.Twitter;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new TwitterCore(authConfig), new Digits());
+        Fabric.with(this, new TwitterCore(authConfig), new Digits(), new Crashlytics());
         setContentView(R.layout.activity_main);
 
         DigitsAuthButton digitsButton = (DigitsAuthButton) findViewById(R.id.auth_button);
@@ -52,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
                 String msg = "@" + session.getUserName() + " logged in! (#" + session.getUserId() + ")";
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
             }
+
+            // TODO: Move this method and use your own event name to track your key metrics
+            public void onKeyMetric() {
+                // TODO: Use your own string attributes to track common values over time
+                // TODO: Use your own number attributes to track median value over time
+                Answers.getInstance().logCustom(new CustomEvent("Video Played")
+                        .putCustomAttribute("Category", "Comedy")
+                        .putCustomAttribute("Length", 350));
+            }
+
 
 
             @Override
