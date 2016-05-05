@@ -64,7 +64,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_marginBottom="10dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content">PVPF44jTIinuFR6iDYqZw4e6R
 
                 <com.digits.sdk.android.DigitsAuthButton
                     android:id="@+id/auth_button"

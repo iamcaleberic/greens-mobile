@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
-        Fabric.with(this, new TwitterCore(authConfig), new Digits(), new Crashlytics());
+        TwitterAuthConfig authConfig = new TwitterAuthConfig("PVPF44jTIinuFR6iDYqZw4e6R", "TcPNXMyXX94OImthaVkEBjNNadFiZ5sobUNzc5pWpvd6GNBztJ");
+        Fabric.with(this, new Digits(), new Crashlytics(), new Twitter(authConfig));
         setContentView(R.layout.activity_main);
 
         DigitsAuthButton digitsButton = (DigitsAuthButton) findViewById(R.id.auth_button);
-        digitsButton.setCallback(((DemoApplication) getApplication()).getAuthCallback());
+        //digitsButton.setCallback(((DemoApplication) getApplication()).getAuthCallback());
         loginButton = (TwitterLoginButton) findViewById(R.id.twitter_login_button);
         loginButton.setCallback(new Callback<TwitterSession>() {
 
